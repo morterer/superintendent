@@ -1,12 +1,24 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="styles.css" >
+		<script type="text/javascript">
+			function happy(){
+				document.getElementById("left").className= "happy lefteye";
+				document.getElementById("right").className= "happy righteye";
+			}
+			function neutral(){
+				document.getElementById("left").className= "eyes lefteye";
+				document.getElementById("right").className= "eyes righteye";
+			}
+		</script>
 	</head>
 	
 	<body>
+		<button onclick="neutral()">Default</button>
+		<button onclick="happy()">Happy</button>
 		<div class="face">
-			<p class="eyes lefteye"></p>
-			<p class="happy righteye"></p>
+			<p id="left" class="eyes lefteye"></p>
+			<p id="right" class="eyes righteye"></p>
 		</div>
 	</body>
 </html>
