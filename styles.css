@@ -1,3 +1,17 @@
+// * { border: 1px solid red; }
+
+body {
+	background: black
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
 div.face {
 	width: 300px;
 	height: 300px;
@@ -29,11 +43,31 @@ div.face {
 	position: absolute;
 	top: 75px;
 }	
-	
+
+.angry {
+	width: 50px;
+	height: 25px;
+	background: white;
+	border-bottom-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+	position: absolute;
+	top: 90px;
+}	
+
 .lefteye {
   left: 75px;
 }
 		
 .righteye {
   right: 75px;
+}
+
+.angry.lefteye {
+	left: 70px;
+	transform: rotate(25deg);
+}
+
+.angry.righteye {
+	right: 70px;
+	transform: rotate(-25deg);
 }

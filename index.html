@@ -2,21 +2,27 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="styles.css" >
 		<script type="text/javascript">
-			function happy(){
-				document.getElementById("left").className= "happy lefteye";
-				document.getElementById("right").className= "happy righteye";
+			const emotions = ['eyes', 'happy', 'angry'];
+			
+			var myTimer = setInterval(timer, 20000);
+			
+			function timer(){
+				setMood(emotions[Math.floor(Math.random() * emotions.length)]);
 			}
-			function neutral(){
-				document.getElementById("left").className= "eyes lefteye";
-				document.getElementById("right").className= "eyes righteye";
+			
+			function setMood(mood){
+				document.getElementById("left").className= `${mood} lefteye`;
+				document.getElementById("right").className= `${mood} righteye`;
 			}
 		</script>
 	</head>
 	
 	<body>
-		<button onclick="neutral()">Default</button>
-		<button onclick="happy()">Happy</button>
-		<div class="face">
+<!--
+		<button onclick="setMood('eyes')">Default</button>
+		<button onclick="setMood('angry')">Happy</button>
+-->
+		<div class="face centered">
 			<p id="left" class="eyes lefteye"></p>
 			<p id="right" class="eyes righteye"></p>
 		</div>
