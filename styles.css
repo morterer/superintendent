@@ -29,7 +29,7 @@ div.face {
 	background: #00b300;
 	}
 	
-p.eyes, p.happy, p.angry {
+p.eyes, p.happy, p.angry, p.sad {
 	background: white;
 	position: absolute;
 }
@@ -50,7 +50,7 @@ p.eyes, p.happy, p.angry {
 	top: 100px;
 }	
 
-.angry {
+.angry, .sad {
 	width: 75px;
 	height: 40px;
 	border-bottom-left-radius: 100px;
@@ -74,6 +74,16 @@ p.eyes, p.happy, p.angry {
 .angry.righteye {
 	right: 50px;
 	transform: rotate(-25deg);
+}
+
+.sad.lefteye {
+	left: 60px;
+	transform: rotate(-35deg);
+}
+
+.sad.righteye {
+	right: 60px;
+	transform: rotate(35deg);
 }
 
 /* * {

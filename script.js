@@ -49,7 +49,7 @@ function draw()
 
 setInterval(draw, 50);
 
-const emotions = ['eyes', 'happy', 'angry'];
+const emotions = ['eyes', 'happy', 'angry', 'sad'];
 			
 var myTimer = setInterval(timer, 20000);
 
