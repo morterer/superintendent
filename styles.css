@@ -26,14 +26,14 @@ div.face {
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
 	display: block;
-	background: #00b300;
+	background: #5e7e4d;
 	}
 	
-p.eyes, p.happy, p.angry, p.sad, p.curious {
+p.eyes, p.happy, p.angry, p.sad, p.wtf {
 	background: white;
 	position: absolute;
 }
-.eyes, .curious {
+.eyes, .wtf {
 	width: 75px;
 	height: 75px;
 	border-radius: 50%;
@@ -86,7 +86,7 @@ p.eyes, p.happy, p.angry, p.sad, p.curious {
 	transform: rotate(35deg);
 }
 
-.curious.lefteye {
+.wtf.lefteye {
 	width: 75px;
 	height: 40px;
 	border-radius: 0px 0px 100px 100px;

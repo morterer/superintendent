@@ -1,3 +1,5 @@
+// matrix rain code
+// TODO: find and credit origional source
 var c = document.getElementById("c");
 var ctx = c.getContext("2d");
 
@@ -20,18 +22,16 @@ for(var x = 0; x < rows; x++)
 	drops[x] = 1; 
 
 //drawing the characters
-function draw()
-{
+function draw(){
 	//Black BG for the canvas
 	//translucent BG to show trail
 	ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
 	ctx.fillRect(0, 0, c.width, c.height);
 	
-	ctx.fillStyle = "#1a1aff"; //green text
+	ctx.fillStyle = "#1a1aff"; // text color
 	ctx.font = font_size + "px arial";
 	//looping over drops
-	for(var i = 0; i < drops.length; i++)
-	{
+	for(var i = 0; i < drops.length; i++){
 		//a random chinese character to print
 		var text = chinese[Math.floor(Math.random()*chinese.length)];
 		//x = i*font_size, y = value of drops[i]*font_size
@@ -49,16 +49,19 @@ function draw()
 
 setInterval(draw, 50);
 
-const emotions = ['eyes', 'happy', 'angry', 'sad', 'curious'];
-			
+// array of all the emotions
+// must also have matching style defined in the CSS 
+const emotions = ['eyes', 'happy', 'angry', 'sad', 'wtf'];
+
+// randomly change the emotion every twenty seconds
 var myTimer = setInterval(timer, 20000);
 
 function timer(){
     setMood(emotions[Math.floor(Math.random() * emotions.length)]);
 }
 
+// change the emotion by applying different CSS classes to the eyes
 function setMood(mood){
-    console.log("changing");
     document.getElementById("left").className= `${mood} lefteye`;
     document.getElementById("right").className= `${mood} righteye`;
 }
