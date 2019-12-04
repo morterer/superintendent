@@ -28,10 +28,11 @@ function draw(){
 	ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
 	ctx.fillRect(0, 0, c.width, c.height);
 	
-	ctx.fillStyle = "#1a1aff"; // text color
+	ctx.fillStyle = "#fff"; // text color
 	ctx.font = font_size + "px arial";
 	//looping over drops
 	for(var i = 0; i < drops.length; i++){
+		ctx.fillStyle = (Math.random() < 0.5)? "red" : "green"
 		//a random chinese character to print
 		var text = chinese[Math.floor(Math.random()*chinese.length)];
 		//x = i*font_size, y = value of drops[i]*font_size
