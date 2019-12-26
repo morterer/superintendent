@@ -25,13 +25,14 @@ for(var x = 0; x < rows; x++)
 function draw(){
 	//Black BG for the canvas
 	//translucent BG to show trail
-	ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+	ctx.fillStyle = "rgba(0, 0, 0, 0.025)";
 	ctx.fillRect(0, 0, c.width, c.height);
 	
 	ctx.fillStyle = "#fff"; // text color
 	ctx.font = font_size + "px arial";
 	//looping over drops
 	for(var i = 0; i < drops.length; i++){
+		// 50-50 chance of making a character red or green
 		ctx.fillStyle = (Math.random() < 0.5)? "red" : "green"
 		//a random chinese character to print
 		var text = chinese[Math.floor(Math.random()*chinese.length)];
