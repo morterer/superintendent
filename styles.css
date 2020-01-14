@@ -101,13 +101,12 @@ p.eyes, p.happy, p.angry, p.sad, p.wtf {
 	width: 500px;
 	height: 500px;
 	border-radius: 50%;
-	border: 5px solid;
-	border-left-color: rgb(29, 161, 242);
-	border-right-color: rgb(29, 161, 242);
+	border: 5px dotted;
+	border-left-color: white;
+	border-right-color: white;
 	background: transparent;
-	animation: rotate-spinner-one 10s linear infinite;
+	animation: rotate-spinner-one 7s linear infinite;
 	position: absolute;
-	border-style: dotted;
   }
 
   @keyframes rotate-spinner-one {
@@ -123,11 +122,10 @@ p.eyes, p.happy, p.angry, p.sad, p.wtf {
 	width: 550px;
 	height: 550px;
 	border-radius: 50%;
-	border: 5px solid rgba(29, 161, 242, 0.2);
-	border-left-color: rgb(29, 161, 242);
-	border-right-color: rgb(29, 161, 242);
+	border: 5px solid; 
+	border-color: rgba(29, 161, 242, 0.2) white ;
 	background: transparent;
-	animation: rotate-spinner-two 15s linear infinite;
+	animation: rotate-spinner-two 20s linear infinite;
 	position: absolute;
   }
 
