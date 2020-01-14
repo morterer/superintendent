@@ -1,22 +1,26 @@
-/*basic reset*/
-
 /*adding a black bg to the body to make things clearer*/
 body {background: black;}
-canvas {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	z-index: -1
-}
 
+.container {
+    display: flex;           /* establish flex container */
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;     /* center items horizontally, in this case */
+    height: 97vh;
+}
 
 .centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
+.face {
+	width: 300px;
+    margin: 5px;
+    text-align: center;
+}
 div.face {
 	width: 300px;
 	height: 300px;
@@ -93,6 +97,48 @@ p.eyes, p.happy, p.angry, p.sad, p.wtf {
 	top: 130px;
 }
 
+.spinner-one {
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	border: 5px solid;
+	border-left-color: rgb(29, 161, 242);
+	border-right-color: rgb(29, 161, 242);
+	background: transparent;
+	animation: rotate-spinner-one 10s linear infinite;
+	position: absolute;
+	border-style: dotted;
+  }
+
+  @keyframes rotate-spinner-one {
+	from {
+	  transform: rotate(0);
+	}
+	to {
+	  transform: rotate(360deg);
+	}
+  }
+
+  .spinner-two {
+	width: 550px;
+	height: 550px;
+	border-radius: 50%;
+	border: 5px solid rgba(29, 161, 242, 0.2);
+	border-left-color: rgb(29, 161, 242);
+	border-right-color: rgb(29, 161, 242);
+	background: transparent;
+	animation: rotate-spinner-two 15s linear infinite;
+	position: absolute;
+  }
+
+  @keyframes rotate-spinner-two {
+	from {
+	  transform: rotate(360deg);
+	}
+	to {
+	  transform: rotate(0);
+	}
+  }
 /* * {
 	border: 1px solid red;
   } */
